@@ -1,0 +1,17 @@
+<div  class="background" >
+  <div class="login-page">
+   <div class="form">
+    <form class="login-form" [formGroup]="rForm" >
+      <input type="text" formControlName="username" placeholder="username"/>
+      <div *ngIf="!rForm.controls.username.valid  && (rForm.controls.username.touched)">
+          <p>This field can't be empty.</p>
+      </div>
+      <input type="password"  formControlName="password"placeholder="password"/>
+      <div *ngIf="!rForm.controls.password.valid  && (rForm.controls.password.touched)">
+          <p>This field can't be empty.</p>
+      </div>
+      <button  (click)="login()">login</button>
+    </form>
+  </div>
+</div>
+</div>
