@@ -25,7 +25,7 @@ export class DataServiceService {
     delete(data){
       let link = "https://uiubloodbank.ml/API/deleteUser.php";
      return this.http.post(link,data)
-     //.map(res =>res.json());
+     
     }
 
     showUser(){
