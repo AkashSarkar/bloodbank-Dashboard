@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   login(){
     this.service.adminLogin(this.rForm.value).subscribe(data => {
     this.responsedata=data;
-    console.log(this.responsedata);
+    //console.log(this.responsedata);
     this.result=data[0].token;
     if(this.result!="Invalid"){
       this.service.setIsUserLoggedIn();

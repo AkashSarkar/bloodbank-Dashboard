@@ -22,4 +22,15 @@ export class DataServiceService {
     
     }
 
+    delete(data){
+      let link = "https://uiubloodbank.ml/API/deleteUser.php";
+     return this.http.post(link,data)
+     //.map(res =>res.json());
+    }
+
+    showUser(){
+      return this.http.get('https://www.uiubloodbank.ml/API/fetchUserForAdmin.php')
+      .map(res =>res.json());
+    }
+
 }

@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+export interface RouteInfo {
+    path: string;
+    title: string;
+    
+}
 
+  export const ROUTES: RouteInfo[] = [
+    
+    { path: 'delete', title: 'Delete'}
+];
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  menuItems:any;
   constructor() { }
 
   ngOnInit() {
+    this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
  
  openNav() {

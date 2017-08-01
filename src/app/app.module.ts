@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { AuthGuard } from "./auth.guard";
 import { DataServiceService } from "./data-service.service";
+import { DeleteComponent } from './delete/delete.component';
 const appRoutes: Routes = [
   { path: '',
     redirectTo: 'login',
@@ -22,12 +23,18 @@ const appRoutes: Routes = [
     canActivate:[AuthGuard],
     component:DashboardComponent
   },
+  {
+    path:'delete',
+    canActivate:[AuthGuard],
+    component:DeleteComponent
+  }
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

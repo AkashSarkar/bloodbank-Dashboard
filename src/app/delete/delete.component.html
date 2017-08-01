@@ -1,0 +1,21 @@
+<div class="body">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th> 
+        <th>Gender</th>
+        <th>BloodGroup</th>
+        <th>Location</th>
+        <th>Phone</th>
+      </tr>
+      <tr *ngFor=" let user of users ">
+        <td>{{user.realname}}</td>
+        <td>{{user.birthdate}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.bloodgroup}}</td>
+        <td>{{user.location}}</td>
+        <td>{{user.phoneno}}</td>
+        <button  (click)="delete(user.username,user.gender)">Delete</button>
+      </tr>
+    </table>
+  </div>

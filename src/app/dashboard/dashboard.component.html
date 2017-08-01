@@ -1,12 +1,19 @@
+<div class="container">
 <div id="mySidenav" class="sidenav">
   <a  class="closebtn" (click)="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <li *ngFor="let menuItem of menuItems" >
+            <a routerLink="[menuItem.path]" routerLinkActive="active">
+                <p>{{menuItem.title}}</p>
+            </a>
+  </li>
 </div>
-
-<div id="main">
+<div>
   
+</div>
+<div id="main">
+  <h1>BloodBank</h1>
   <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; </span>
+  <app-delete></app-delete>
+</div>
+  
 </div>
